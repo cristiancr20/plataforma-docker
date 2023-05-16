@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjeta</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    {% include "navbar.html" %}
+
+    <h1>Tarjeta</h1>
+    <div >
+        <form action="" method="post" class="col-6 col-md-4">
+            {% csrf_token %}
+            <table>
+                {{form}}
+            </table>
+            <input class="btn btn-primary" type="submit" value="Guardar Tarjeta">
+        </form>
+    </d>
+</body>
+</html>
