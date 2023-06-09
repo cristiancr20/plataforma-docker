@@ -1,0 +1,13 @@
+version: "3"
+services:
+  app:
+    build: .
+    command: 
+      sh -c " python manage.py migrate &&
+              python manage.py runserver 0.0.0.0:8000"
+    image: datsik3/cristian
+    container_name: app
+    ports:
+      - "8080:8000"
+    expose:
+      - "8000"
